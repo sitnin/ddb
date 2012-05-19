@@ -1,0 +1,45 @@
+{
+    "files": [
+        {
+            "path": "/opt/ddb_test",
+            "include": [
+                "webapp.py",
+                "notifier.py",
+                "static/*",
+                "templates/*",
+                "etc/sample*.conf"
+            ],
+            "exclude": [
+                ".git*"
+            ]
+        }
+    ],
+    "conffiles": [
+        {
+            "path": "/opt/ddb_test",
+            "files": [
+                "etc/*.conf"
+            ]
+        }
+
+    ],
+    "scripts": {
+        "preinst": null,
+        "postinst": "scripts/postinst.sh",
+        "prerm": null,
+        "postrm": null
+    },
+    "control": {
+        "Package": "ddb-test",
+        "Version": "1.464",
+        "Architecture": "all",
+        "Maintainer": "Gregory Sitnin <sitnin@gmail.com>",
+        "Depends": null,
+        "Conflicts": null,
+        "Replaces": null,
+        "Section": "devel",
+        "Priority": "extra",
+        "Homepage": "http://sitnin.github.com/ddb/",
+        "Description": "Continuous integration system written in Java\n Jenkins is an extensible continuous engine written in Java."
+    }
+}
