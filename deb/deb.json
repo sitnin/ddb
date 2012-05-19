@@ -8,7 +8,7 @@
         "Section": "devel",
         "Priority": "extra",
         "Homepage": "http://sitnin.github.com/ddb/",
-        "Description": "Continuous integration system written in Java\n Jenkins is an extensible continuous engine written in Java."
+        "Description": "Dumb .deb .builder\n This is a python script which reads package description from a single JSON-file and creates binary package."
     }
 
     , "files": [
