@@ -1,6 +1,6 @@
 #Dumb .deb builder
 
-Current version: 0.1.0
+Current version: 0.2.0
 
 Project website: http://sitnin.github.com/ddb/
 

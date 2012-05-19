@@ -1,7 +1,7 @@
 {
     "control": {
         "Package": "ddb",
-        "Version": "0.1.0",
+        "Version": "0.2.0",
         "Architecture": "all",
         "Maintainer": "Gregory Sitnin <sitnin@gmail.com>",
         "Depends": "dpkg, python, python-argparse",
@@ -13,13 +13,13 @@
 
     , "files": [
         {
-            "path": "/usr/lib/ddb",
+            "target": "/usr/lib/ddb",
             "include": [
                 "ddb.py"
             ]
-        },
-        {
-            "path": "/usr/share/doc/ddb",
+        }
+        , {
+            "target": "/usr/share/doc/ddb",
             "include": [
                 "README.md",
                 "sample.json"

@@ -159,9 +159,10 @@ if __name__ == '__main__':
 
             _print("Copying files...")
             for chunk in rules["files"]:
+                chunk_src_dir = os.path.join(src_dir, chunk["source"]) if "source" in chunk else src_dir
                 includes = chunk["include"] if "include" in chunk else list()
                 excludes = chunk["exclude"] if "exclude" in chunk else list()
-                copy_chunk(src_dir, real_tmp + chunk["path"], includes, excludes)
+                copy_chunk(chunk_src_dir, real_tmp + chunk["target"], includes, excludes)
 
             _print("Generating DEBIAN directory contents...")
             debian_dir = os.path.join(real_tmp, "DEBIAN")

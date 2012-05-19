@@ -16,9 +16,16 @@
     ],
     "conffiles": [
         {
-            "path": "/opt/ddb_test",
+            "target": "/opt/ddb_test",
             "files": [
                 "etc/*.conf"
+            ]
+        }
+        , {
+            "source": "inside/project",
+            "target": "/opt/ddb_test",
+            "files": [
+                "sample-*.conf"
             ]
         }
 
