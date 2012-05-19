@@ -1,2 +1,4 @@
 *.pyc
 .DS_*
+tmp
+out

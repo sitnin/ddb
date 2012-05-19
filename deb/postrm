@@ -1,0 +1,20 @@
+#!/bin/sh
+# postrm script for ddb
+
+set -e
+
+case "$1" in
+    purge|remove|upgrade|abort-install|abort-upgrade)
+        rm -f /usr/local/bin/ddb
+    ;;
+
+    failed-upgrade|disappear)
+    ;;
+
+    *)
+        echo "postrm called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+exit 0

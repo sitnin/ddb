@@ -1,0 +1,34 @@
+{
+    "control": {
+        "Package": "ddb",
+        "Version": "0.1.0",
+        "Architecture": "all",
+        "Maintainer": "Gregory Sitnin <sitnin@gmail.com>",
+        "Depends": "dpkg, python, python-argparse",
+        "Section": "devel",
+        "Priority": "extra",
+        "Homepage": "http://sitnin.github.com/ddb/",
+        "Description": "Continuous integration system written in Java\n Jenkins is an extensible continuous engine written in Java."
+    }
+
+    , "files": [
+        {
+            "path": "/usr/lib/ddb",
+            "include": [
+                "ddb.py"
+            ]
+        },
+        {
+            "path": "/usr/share/doc/ddb",
+            "include": [
+                "README.md",
+                "sample.json"
+            ]
+        }
+    ]
+
+    , "scripts": {
+        "postinst": "deb/postinst",
+        "postrm": "deb/postrm"
+    }
+}
