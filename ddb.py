@@ -3,7 +3,7 @@
 
 __author__ = "Gregory Sitnin <sitnin@gmail.com>"
 __copyright__ = "Gregory Sitnin, 2012"
-__version__ = "0.2.1"
+__version__ = "0.2.2"
 
 import os
 import sys
