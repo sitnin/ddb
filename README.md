@@ -37,3 +37,14 @@ And this is how is the output looks like:
     Deleting temporary directory...
 
     Package built: /home/builder/ddb/out/ddb_0.1.0-0ubuntu3_all.deb
+
+## TODO
+
+  * Python Virtualenv support (planned for 0.3)
+
+## Contact information
+
+Feel free to contact me about bugs, features and suggestions via:
+
+  * Twitter: sitnin
+  * Email: sitnin@gmail.com
