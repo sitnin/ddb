@@ -75,7 +75,7 @@ def make_conffiles_file(debian_dir, tmp_dir, tgt_dir, includes, excludes):
 
 
 def make_plain_conffiles(directory, defs):
-    with open(os.path.join(directory, "control"), "w") as f:
+    with open(os.path.join(directory, "conffiles"), "w") as f:
         for item in defs:
             f.write("%s\n" % item)
         f.close()
