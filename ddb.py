@@ -3,7 +3,7 @@
 
 __author__ = "Gregory Sitnin <sitnin@gmail.com>"
 __copyright__ = "Gregory Sitnin, 2012"
-__version__ = "0.2.0"
+__version__ = "0.2.1"
 
 import os
 import sys
@@ -71,6 +71,13 @@ def make_conffiles_file(debian_dir, tmp_dir, tgt_dir, includes, excludes):
         for filename in files:
             target_filename = os.path.join(tgt_dir, filename)
             f.write("%s\n" % target_filename)
+        f.close()
+
+
+def make_plain_conffiles(directory, defs):
+    with open(os.path.join(directory, "control"), "w") as f:
+        for item in defs:
+            f.write("%s\n" % item)
         f.close()
 
 
@@ -171,8 +178,9 @@ if __name__ == '__main__':
             make_control_file(debian_dir, rules["control"])
 
             if "conffiles" in rules:
-                for chunk in rules["conffiles"]:
-                    make_conffiles_file(debian_dir, real_tmp, chunk["path"], chunk["files"], [])
+                make_plain_conffiles(debian_dir, rules["conffiles"])
+                # for chunk in rules["conffiles"]:
+                #     make_conffiles_file(debian_dir, real_tmp, chunk["path"], chunk["files"], [])
 
             copy_scripts(debian_dir, src_dir, rules["scripts"])
 
